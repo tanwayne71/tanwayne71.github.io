@@ -1,0 +1,48 @@
+body
+{
+    /* Colour Code Reference: https://icolorpalette.com/color/grapefruit */
+    background: #fd5956;
+}
+
+.page
+{
+    width:80vw;
+    height:80vh;
+    padding: 1vw;
+    border:1px solid #fedbda;
+}
+
+nav ul li
+{
+    display:flex;
+}
+
+#page1{
+    background: #ffa6a4;
+    color:black;
+    opacity: 0.8;
+}
+
+#page2{
+    background:#a90502;
+    color: white;
+    opacity: 0.8;
+}
+
+#page3{
+    background:#580201;
+    color: white;
+    opacity: 0.8;
+}
+
+/*for responsive menu*/
+#hamIcon{display:none;}
+@media screen and (max-width:800px){
+    nav ul li{display:block;} /*make a menu items vertical*/
+    #hamIcon{display: block;} /* unhide menu icon */
+    nav ul{display:none;} /*hide the menu item list*/
+}
+
+#menuList.menuShow{
+    display: block;
+}
