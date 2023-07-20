@@ -1,4 +1,4 @@
-//alert("script.js running");
+
 //target all elements to save to constants
 const page1btn=document.querySelector("#page1btn");
 const page2btn=document.querySelector("#page2btn");
@@ -40,7 +40,7 @@ page3btn.addEventListener("click", function () {
 /*for hamMenu */
 const hamBtn=document.querySelector("#hamIcon");
 hamBtn.addEventListener("click",toggleMenus);
-const menuItemsList=document.querySelector("nav ul");
+const menuItemsList=document.querySelector(".menuList");
 
 function toggleMenus(){ /*open and close menu*/
     menuItemsList.classList.toggle("menuShow");

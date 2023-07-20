@@ -2,20 +2,54 @@ body
 {
     /* Colour Code Reference: https://icolorpalette.com/color/grapefruit */
     background: #fd5956;
+    display: block;
+}
+
+.heading{
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    padding: 15px;
+    background-color: #480210;
+    color: #ffa6a4;
+    align-items: center;
+}
+
+.heading img{
+    justify-content: center;
+    max-width: 50px;
+    min-width: 45px;
+}
+
+
+h1.title {
+    font-size: 40px;
+}
+
+.menuList{
+    grid-column: 1/4;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.menuChild{
+    flex-basis: 30%;
+    flex-grow: 1;
+    margin: 3px;
+    background-color: #810301;
+    border-style: solid;
+    border-width: 3px 0px;
+    border-color: #a10401;
+    text-align: center;
 }
 
 .page
 {
-    width:80vw;
+    width:auto;
     height:80vh;
     padding: 1vw;
     border:1px solid #fedbda;
 }
 
-nav ul li
-{
-    display:flex;
-}
 
 #page1{
     background: #ffa6a4;
@@ -35,14 +69,33 @@ nav ul li
     opacity: 0.8;
 }
 
+.menuList.menuShow{
+    display: flex;
+}
+
+.nutritional_facts{
+    display: grid;
+    
+}
+
 /*for responsive menu*/
 #hamIcon{display:none;}
 @media screen and (max-width:800px){
-    nav ul li{display:block;} /*make a menu items vertical*/
     #hamIcon{display: block;} /* unhide menu icon */
-    nav ul{display:none;} /*hide the menu item list*/
-}
-
-#menuList.menuShow{
-    display: block;
+    .menuList{
+        display: none;
+        flex-flow: column nowrap;
+    }
+    .menuChild{
+        flex-basis: 100%;
+    }
+    .heading img{
+        justify-content: center;
+        max-width: 30px;
+        min-width: 25px;
+    }
+    h1.title {
+        font-size: 30px;
+    }
+    
 }

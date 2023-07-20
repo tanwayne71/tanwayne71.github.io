@@ -6,29 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prac13a</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="image/logo.png"> 
     <script src="js/script.js" defer></script>
 </head>
     <body>
-        <header>
-            <h1>Grapefruit</h1>
-        </header>
-        <nav> <!--menu systtm-->
-            <button id="hamIcon"> Menu </button>
-            <ul id="menuList">
-                <li><button id="page1btn">Details</button></li>
-                <li><button id="page2btn">History</button></li>
-                <li><button id="page3btn">Benefits</button></li>
-            </ul>
-        </nav>
+        <div class="heading">
+            <img src = "image/logo.png" alt="logo">
+            <!-- https://www.vectorstock.com/royalty-free-vector/cartoon-grapefruit-fresh-vitamin-fruit-juicy-vector-27065094 -->
+            <h1 class="title">Grapefruit</h1>
+            <img src="image/hamburg_icon.png" alt="hamburg_icon" id="hamIcon">
+            <div class="menuList"> <!--menu systtm-->
+                <div class="menuChild" id="page1btn">Details</div>
+                <div class="menuChild" id="page2btn">History</div>
+                <div class="menuChild" id="page3btn">Benefits</div>
+            </div>
+        </div>
         <div id="pagecontainer">
             <div class="page" id="page1">
-                page 1 content
+                Details
             </div>
             <div class="page" id="page2">
-                page 2 content
+                History 
             </div>
             <div class="page" id="page3">
-                page 3 content
+                Benefits
             </div>
         </div>
     </body>    
