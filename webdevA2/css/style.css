@@ -1,8 +1,20 @@
+/*Animations*/
+@keyframes pickup {
+    from{filter: opacity(1) drop-shadow(0 0 white);}
+    to {filter: opacity(0.2) drop-shadow(0 0 red);}
+    }
+/*Animations*/
+
+/*Headers*/
 body
 {
     /* Colour Code Reference: https://icolorpalette.com/color/grapefruit */
     background: #fd5956;
     display: block;
+}
+
+img {
+    object-fit: contain;
 }
 
 .heading{
@@ -20,15 +32,104 @@ body
     min-width: 45px;
 }
 
-
 h1.title {
     font-size: 40px;
+}
+/*Headers*/
+
+/*Content*/
+.page
+{
+    width:auto;
+    height:fit-content;
+    margin: 1px;
+    border:1px solid #fedbda;
+}
+
+.flex_container{
+    display: grid;
+    min-height: 0px;
+    grid-template-columns: auto 70%;
+    justify-items: center;
+    padding: 30px 15px;
+}
+
+.flex_container img{
+    flex-basis: 50%;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    min-height: 150px;
+    max-height: 200px;
+    object-fit: contain;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.flex_container p{
+    display: flex;
+    flex-basis: 50%;
+    margin: 3px;
+    padding: 10px;
+}
+/*Different Styles*/
+.style1{
+    background: #ffa6a4;
+    color:black;
+}
+
+.style2{
+    background: #cc411f;
+    color:white;
+}
+
+.style3{
+    background: #fedbda;
+    color:black;
+}
+
+.even{
+    grid-template-columns: 70% auto;
+}
+
+.style1.even{
+    background-color:#fe6347;
+    color: white;
+}
+.style2.even{
+    background-color:#fedbda;
+    color: black;
+}
+.style3.even{
+    background-color:#ff3e3b;
+    color: white;
+}
+
+.links {
+    display: none;
+    height: fit-content;
+}
+
+.even img{
+    order: 1;
+}
+
+.no_image{
+    grid-template-columns: 100%;
+}
+/*Content*/
+
+/*Nav Bar*/
+#hamIcon{
+    display:none;
+    transition: all 0.2s ease-in-out;
 }
 
 .menuList{
     grid-column: 1/4;
     display: flex;
     flex-flow: row nowrap;
+    max-height: 100px;
+    transition: max-height 0.2s ease-out;
 }
 
 .menuChild{
@@ -40,53 +141,80 @@ h1.title {
     border-width: 3px 0px;
     border-color: #a10401;
     text-align: center;
+    min-height: 1rem;
+}
+/*Nav Bar*/
+
+/*Bottom Nav Bar*/
+.credits {
+    background-color: #810301;
+    color: #ffcccb;
+    justify-items: left;
+    padding: 15px;
 }
 
-.page
+.credits h2{
+    font-size: 30px;
+    margin: 5px 0px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.credits a{
+    color:#e49f9d;
+    transition: all 0.2s ease-in;
+    flex-basis: 100%;
+    display: block;
+    width: 100%;
+}
+.credits a:hover{
+    color: #fedbda;
+}
+/*Bottom Nav Bar*/
+
+/*Game*/
+.interactive-space 
 {
-    width:auto;
-    height:80vh;
-    padding: 1vw;
-    border:1px solid #fedbda;
+    background-color: white;
+    border-style: solid;
+    border-color: #480210;
+    width: auto;
+    width: 350px;
+    height: 300px;
+    display: block;
+    position: relative;
 }
 
-
-#page1{
-    background: #ffa6a4;
-    color:black;
-    opacity: 0.8;
+.game-object
+{
+    position: absolute;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
 }
 
-#page2{
-    background:#a90502;
-    color: white;
-    opacity: 0.8;
+.game-object:active{
+    animation-name: pickup;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
 }
 
-#page3{
-    background:#580201;
-    color: white;
-    opacity: 0.8;
-}
+#score {
 
-.menuList.menuShow{
-    display: flex;
 }
-
-.nutritional_facts{
-    display: grid;
-    
-}
+/*Game*/
 
 /*for responsive menu*/
-#hamIcon{display:none;}
 @media screen and (max-width:800px){
     #hamIcon{display: block;} /* unhide menu icon */
     .menuList{
-        display: none;
         flex-flow: column nowrap;
+        max-height: 0px;
     }
     .menuChild{
+        display: none;
         flex-basis: 100%;
     }
     .heading img{
@@ -97,5 +225,22 @@ h1.title {
     h1.title {
         font-size: 30px;
     }
-    
+
+
+    .flex_container{
+        grid-template-columns: 100%;
+    }
+    .flex_container img{
+        min-height: 50px;
+        max-width: none;
+        max-height: 50px;
+        object-fit: cover;
+        
+    }
+    .even{
+        grid-template-columns: 100%;
+    }
+    .even img{
+        order: 0;
+    }
 }
