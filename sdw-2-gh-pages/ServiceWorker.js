@@ -1,9 +1,9 @@
 const cacheName = "SDM-sdw-2-0.0.1";
 const contentToCache = [
-    "Build/build.loader.js",
-    "Build/build.framework.js",
-    "Build/build.data",
-    "Build/build.wasm",
+    "Build/01072024.loader.js",
+    "Build/01072024.framework.js",
+    "Build/01072024.data",
+    "Build/01072024.wasm",
     "TemplateData/style.css"
 
 ];
